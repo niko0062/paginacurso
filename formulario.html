@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <script>
+        window.onload = function() {
+  var colorForm = document.forms['colorForm'];
+
+  colorForm.addEventListener('change', function () {
+    var colorSeleccionado = colorForm.elements['color'].value;
+
+    if (colorSeleccionado === 'rojo') {
+      alert('¡Seleccionaste el color rojo!');
+    }
+    else if (colorSeleccionado === 'azul') {
+      alert('¡Seleccionaste el color azul!');
+    }
+    else if(colorSeleccionado === 'verde') {
+      alert('¡Seleccionaste el color verde!');
+    }
+  });
+};
+
+    </script>
+</head>
+<body>
+    <h1>FORMULARIO HTML</h1><br>
+    <form name="colorForm">
+        <fieldset>
+            <legend>COLOR FAVORITO</legend>
+            <label><input type="radio" name="color" value="rojo"> Rojo</label><br>
+
+            <label><input type="radio" name="color" value="azul"> Azul</label><br>
+
+            <label><input type="radio" name="color" value="verde"> Verde</label><br>
+
+            <input type="color"><br>
+            <select name="color2" id="color2">
+                <option value="blue">Azul</option>
+                <option value="red">Rojo</option>
+            </select>
+            <br><br>
+           <legend>Pasa tiempo:</legend>
+            <input type="checkbox" id="read">
+            <label for="read">Leer</label><br>
+
+            <input type="checkbox" id="dance">
+            <label for="dance">Bailar</label><br>
+
+        </fieldset><br>
+       
+    </form>
+    <form action="">
+        <fieldset>
+            <legend>DATOS</legend>
+            <label for="nom">Nombre:</label><br>
+            <input type="text" id="nom" placeholder="Ingresar nombre"><br><br>
+
+            <label for="password">Contraseña:</label><br>
+            <input type="password" id="password" placeholder="Ingrese Contraseña"><br><br>
+
+            <label for="date">Fecha de nacimientol:</label><br>
+            <input type="date" id="date">
+            <br><br>
+            <input type="submit" value="Listo">
+            <input type="reset" value="Borrar">
+        </fieldset>
+        <br>
+        
+    </form>
+
+</body>
+</html>
